@@ -1,6 +1,6 @@
 # 🚀 Backend: API de Login (Spring Boot + MariaDB)
 
-Este repositorio contiene la API de inicio de sesión desarrollada con Java 21 y Spring Boot 3.5.5.
+Este repositorio contiene la API de inicio de sesión desarrollada con Java 21 y Spring Boot 3.5.6.
 
 ## 💾 1. Configuración de la Base de Datos (MariaDB)
 
