@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.Optional;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 // Permitir peticiones desde un front (por ejemplo, React en 3001)
 @RestController
@@ -33,6 +34,7 @@ public class LoginController {
      * @return Respuesta con 'success' y 'message'.
      */
     @PostMapping("/login")
+    @CrossOrigin(origins = "http://127.0.0.1:8000/")
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest request) {
 
         // 1. Validar si el email o password son nulos o vacíos
