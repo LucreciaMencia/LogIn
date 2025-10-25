@@ -15,4 +15,6 @@ import java.util.Optional;
 public interface UserRepository extends JpaRepository<User, Long> {
     // Método personalizado para encontrar un usuario por email y contraseña
     Optional<User> findByEmailAndPassword(String email, String password);
+    Optional<User> findByEmail(String email);
+
 }
