@@ -1,0 +1,88 @@
+
+/* Fondo degradado */
+.container {
+  background: linear-gradient(135deg, #66ea71 0%, #a24ba0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Tarjeta del login */
+.card {
+  background-color: #fcdcffff;
+  border-radius: 5px;
+  box-shadow: 0 10px 25px #33002c33;
+  width: 100%;
+  max-width: 400px;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+/* Título del login */
+.title {
+  font-family: Georgia, serif;
+  color: #330f21;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* Inputs */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #fcdcffff;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+}
+
+.form input:focus {
+  border-color: #667eea;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(102, 126, 234, 0.2);
+}
+
+/* Botón */
+.form button {
+  width: 100%;
+  padding: 12px;
+  background-color: #667eea;
+  color: #fcdcffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #c95ad8;
+  
+.secondaryButton {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: white;
+  color: #0070f3;
+  border: 1px solid #0070f3;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.secondaryButton:hover {
+  background-color: #e6f0ff;
+}
+
+}
