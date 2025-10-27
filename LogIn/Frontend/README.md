@@ -4,14 +4,6 @@ npm run dev".
 Se debe tener instalado Node.js 20.9 o superior https://nodejs.org/es
 por ahora se ejecuta en este enlace: http://localhost:3000/register
 
-¡Por supuesto! ✅
-Te dejo un **README completísimo y profesional** para tu proyecto con Next.js, login, JWT y roles.
-Podés copiarlo **completo** directamente a tu archivo:
-
-📄 **`README.md`** en la raíz del proyecto.
-
----
-
 # ✅ README — Sistema de Login con Roles (Next.js + JWT)
 
 ```md
@@ -165,5 +157,6 @@ Bloquea acceso a páginas privadas si:
 |  ✅ Media  | Vincular datos reales de usuario desde backend |
 |  ✅ Media  | UI de dashboard según permisos                 |
 |  🟡 Baja  | Alias `@` configurado correctamente            |
+
 
 
