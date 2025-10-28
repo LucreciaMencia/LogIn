@@ -1,8 +1,7 @@
 Se movio el frontend al framework Next.js
-Para ejecutar el login se debe abrir  la carpeta en VisualEstudio o similar y ejecutar el comando "npm install
-npm run dev".
+Para ejecutar el login se debe abrir  la carpeta en VisualEstudio o similar y ejecutar el comando "npm install", luejo ejecutar "npm run dev -- -p 8000".
 Se debe tener instalado Node.js 20.9 o superior https://nodejs.org/es
-por ahora se ejecuta en este enlace: http://localhost:3000/register
+por ahora se ejecuta en este enlace: http://localhost:8000/register
 
 # ✅ README — Sistema de Login con Roles (Next.js + JWT)
 
@@ -157,6 +156,7 @@ Bloquea acceso a páginas privadas si:
 |  ✅ Media  | Vincular datos reales de usuario desde backend |
 |  ✅ Media  | UI de dashboard según permisos                 |
 |  🟡 Baja  | Alias `@` configurado correctamente            |
+
 
 
 
