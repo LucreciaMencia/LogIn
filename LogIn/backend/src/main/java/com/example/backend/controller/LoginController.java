@@ -26,7 +26,7 @@ public class LoginController {
     private JwtService jwtService; 
 
     @PostMapping("/login")
-    @CrossOrigin(origins = "http://127.0.0.1:8000/")
+    
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest request) {
 
         // 1. Validar campos vacíos

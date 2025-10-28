@@ -22,7 +22,7 @@ public class RegisterController {
     private final BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 
     @PostMapping("/register")
-    @CrossOrigin(origins = "http://127.0.0.1:8000/") // mismo dominio que login
+    
     public ResponseEntity<?> register(@Valid @RequestBody User userRequest) {
 
         // 1. Verificar si ya existe un usuario con ese email
