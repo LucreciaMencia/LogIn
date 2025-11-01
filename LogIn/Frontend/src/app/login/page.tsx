@@ -90,6 +90,14 @@ return (
           Crear cuenta
           </button>
       </form>
+        <p style={{ marginTop: "1rem" }}>
+          <a
+          href="/forgot-password"
+          style={{ color: "#158a1fff", textDecoration: "underline" }}
+          >
+            ¿Olvidaste tu contraseña?
+           </a>
+            </p>
 
     </div>
   </div>
