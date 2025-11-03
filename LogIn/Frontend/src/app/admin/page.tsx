@@ -1,35 +1,61 @@
 "use client";
 
-import { useRouter } from "next/navigation";
 import styles from "../login/page.module.css";
-import useUser from "../../hooks/useUser";
+import { useRouter } from "next/navigation";
+import useUser from "@/hooks/useUser";
+import useHasPermission from "@/hooks/useHasPermission";
 
-export default function AdminPage() {
+export default function AdminDashboard() {
   const router = useRouter();
   const user = useUser();
+  const hasPermission = useHasPermission;
 
-  const logout = () => {
-    document.cookie =
-      "token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
-    sessionStorage.clear();
-    router.push("/login");
-  };
+  // Seguridad: si no hay usuario, redirigir al login
+  if (!user) {
+    if (typeof window !== "undefined") {
+      router.push("/login");
+    }
+    return null;
+  }
 
   return (
     <div className={styles.container}>
       <div className={styles.card}>
-        <h1 className={styles.title}>Panel de Administrador</h1>
+        <h1 className={styles.title}>Panel de Administración</h1>
+        <p style={{ marginBottom: "20px" }}>
+          Bienvenido <strong>{user.email}</strong><br />
+          Rol actual: <strong>{user.rol}</strong>
+        </p>
 
-        {user ? (
-          <p style={{ marginBottom: "20px" }}>
-            Bienvenido: <b>{user.email}</b> ({user.rol})
-          </p>
-        ) : (
-          <p>Cargando usuario...</p>
+        {/* Botón para gestionar roles (solo si tiene permiso) */}
+        {hasPermission("VIEW_ROLES") && (
+          <button
+            className={styles.secondaryButton}
+            onClick={() => router.push("/admin/roles")}
+          >
+            Gestión de Roles
+          </button>
         )}
 
-        <button className={styles.secondaryButton} onClick={logout}>
-          Cerrar Sesión
+        {/* Ejemplo de otra función futura */}
+        {hasPermission("VIEW_USERS") && (
+          <button
+            className={styles.secondaryButton}
+            onClick={() => router.push("/admin/usuarios")}
+          >
+            Gestión de Usuarios
+          </button>
+        )}
+
+        {/* Botón para cerrar sesión */}
+        <button
+          style={{ marginTop: "30px" }}
+          onClick={() => {
+            sessionStorage.removeItem("token");
+            router.push("/login");
+          }}
+        >
+          Cerrar sesión
         </button>
       </div>
     </div>
